@@ -47,7 +47,10 @@ module.exports = function(app) {
                                     callback(null, body.data);
 
                                     // Binds JSON.stringify(body) to the url
-                                    client.set('http://localhost:3001/dog', JSON.stringify(body.data), function(error) {
+                                    // client.set('http://localhost:3001/dog', JSON.stringify(body.data), function(error) {
+                                    // It defines for how long the data will be stored in redis (param in Seconds)
+                                    client.setex('http://localhost:3001/dog', 10, JSON.stringify(body.data), function(error) {
+
                                         if (error) throw error;
                                     });
                                 }
