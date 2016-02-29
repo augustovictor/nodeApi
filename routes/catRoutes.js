@@ -25,7 +25,14 @@ module.exports = function (app) {
     app.get('/cat/:id', function (req, res) {
         Cat.findById(req.params.id, function(err, cat) {
             if(err) res.json({info: 'Error during find cat', error: err});
-            if(cat) res.json({info: 'Cat found successfully', data: cat});
+            
+            if(cat) {
+                // res.json({info: 'Cat found successfully', data: cat});
+                setTimeout(function() {
+                    res.json({info: 'Cat found successfully', data: cat});
+                }, 8000);
+            }
+
             else res.json({info: 'Cat not found'});
         });
     });

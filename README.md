@@ -8,3 +8,4 @@
 - Forever: CLI tool for ensuring that a given node script runs continuously
 - Request: HTTP request client
 - Async: Higher-order functions and common patterns for asynchronous code
+- Redis: Open source (BSD licensed), in-memory data structure store, used as database, cache and message broker
