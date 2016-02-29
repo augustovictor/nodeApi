@@ -7,3 +7,4 @@
 - Mongoose: MongoDB ODM
 - Forever: CLI tool for ensuring that a given node script runs continuously
 - Request: HTTP request client
+- Async: Higher-order functions and common patterns for asynchronous code

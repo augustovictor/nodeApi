@@ -15,7 +15,7 @@ module.exports = function(app) {
     });
 
     // Read
-    app.get('/dogs', function(req, res) {
+    app.get('/dog', function(req, res) {
     	Dog.find(function(err, dogs) {
         	if (err) res.json({info: 'Error during create dog', error: err});
         	res.json({info: 'Dogs found successfully', data: dogs});
