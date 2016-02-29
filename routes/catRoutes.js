@@ -3,7 +3,7 @@ var Cat = require('../models/catModel.js');
 
 module.exports = function (app) {
     
-    //Declare the model and tell it what to do
+    // Declare the model and tell it what to do
 
     // Create
     app.post('/cat', function (req, res) {
@@ -39,7 +39,7 @@ module.exports = function (app) {
                 _.merge(cat, req.body);
                 
                 cat.save(function(err, cat) {
-                    if(err) res.json({info: 'Error during find cat', error: err});
+                    if(err) res.json({info: 'Error during save cat', error: err});
                     res.json({info: 'Cat updated successfully.'}); 
                 });
             }

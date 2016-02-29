@@ -5,3 +5,5 @@
 - Lodash: Modular utilities
 - Body-Parser: Body parsing middleware
 - Mongoose: MongoDB ODM
+- Forever: CLI tool for ensuring that a given node script runs continuously
+- Request: HTTP request client
